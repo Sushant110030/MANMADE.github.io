@@ -1,0 +1,270 @@
+/* General Reset Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header (h2) Styling */
+h2 {
+    color: white;
+}
+
+/* Navigation Bar Styles */
+ul {
+    margin-left: 10%;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    display: inline-flex;
+}
+
+li, .li2 {
+    width: 20vw;
+    text-align: center;
+    padding: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #ffe6e6;
+    margin: 15px;
+    margin-right: 1%;
+    list-style: none;
+    height: 100%;
+}
+
+.li2 {
+    width: 150px;
+    text-align: left;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+/* Link Styling */
+a {
+    color: #bf4040;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+/* Navbar Hover Effects */
+.drop1, li:hover {
+    background-color: white;
+    position: relative;
+}
+
+a:hover {
+    color: black;
+}
+
+/* Navbar Click Effects */
+a:onclick {
+    background-color: green;
+}
+
+li:onclick {
+    background-color: green;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding-top: 0;
+    margin: 0;
+    top: 0;
+    text-align: left;
+    box-sizing: border-box;
+    background-color: #660066;
+    position: fixed;
+    width: 100%;
+}
+
+/* Hover Effect on Popup */
+h2:hover .popup1 {
+    color: red;
+    display: none;
+}
+
+/* Section Styles */
+.box-1 {
+    width: 100%;
+    height: 80vh;
+    background-image: url('file:///C:/Users/Sushant/Desktop/images.png');
+    background-size: contain;
+}
+
+.box-2 {
+    width: 100%;
+    background-color: #cce0ff;
+    height: 320px;
+    padding-top: 40px;
+}
+
+/* Media Query for Tablet and Mobile (Max-width 1024px) */
+@media only screen and (max-width: 1024px) {
+    .box-1 {
+        height: 50vh;
+    }
+    .box-2 {
+        height: 32vh;
+        margin-bottom: 0;
+        zoom: 200%;
+    }
+    .navbar {
+        height: 150px;
+        font-size: 3.5vw;
+    }
+    ul {
+        margin-top: 1.5%;
+    }
+    .li2 {
+        width: auto;
+        left: 0;
+    }
+}
+
+/* Submenu Visibility */
+.submenu1, .submenu2, .submenu3, .submenu4 {
+    display: none;
+}
+
+.drop1:hover .submenu1, .drop2:hover .submenu2, .drop3:hover .submenu3, .drop4:hover .submenu4 {
+    display: block;
+    position: fixed;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.drop1:hover .submenu1, .drop2:hover .submenu2, .drop3:hover .submenu3, .drop4:hover .submenu4 {
+    position: absolute;
+    left: 7%;
+}
+
+/* Chat Box Styling */
+.box-3 {
+    width: 10%;
+    background-color: black;
+    height: 10vh;
+    position: relative;
+    top: 100px;
+}
+
+.box-x {
+    background-color: #ffcccc;
+    height: 8vh;
+    width: 150px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url('file:///C:/Users/Sushant/Desktop/images.png');
+    }
+    50% {
+        background-image: url('file:///C:/Users/Sushant/Desktop/download.jpg');
+    }
+    90% {
+        background-image: url('file:///C:/Users/Sushant/Desktop/images.png');
+    }
+}
+
+/* Chat Box with Robot Background */
+.box-4 {
+    background-image: url('cute-robot-icon-vector-21513917.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    right: 0;
+    width: 25vw;
+    height: 55vh;
+    bottom: 0;
+}
+
+/* Textbox for Chat */
+.box-5 {
+    background-color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.textb {
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    background-color: green;
+}
+
+.kaka {
+    color: red;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+}
+
+/* End Screen Styling */
+.end {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Media Query for Mobile (Max-width 1024px) */
+@media only screen and (max-width: 1024px) {
+    .box-4 {
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+    }
+    .drop1:hover .submenu1, .drop2:hover .submenu2, .drop3:hover .submenu3, .drop4:hover .submenu4 {
+        left: -12%;
+    }
+    .textb {
+        width: 100%;
+        position: absolute;
+        height: 20vh;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        background-color: green;
+    }
+    .kaka {
+        color: green;
+        top: 8vh;
+        font-size: 72px;
+        left: 10vw;
+    }
+    #iop {
+        width: 100%;
+        height: 100%;
+        font-size: 4vw;
+    }
+    #chat3 {
+        width: 20%;
+        height: 5%;
+    }
+}
+
+/* Additional Quote Section */
+#yourquote12 {
+    width: 98vw;
+    height: 100vh;
+}
+
+#quotes {
+    width: auto;
+    zoom: 100%;
+}
+
+/* Navbar Styling for Hello Section */
+.hello {
+    height: 50%;
+}
+
+/* Hidden Content Section */
+#content {
+    display: none;
+}
