@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Website</title>
+
+    <!-- External Stylesheet Link -->
+    <link rel="stylesheet" type="text/css" href="practice.css">
+
+    <!-- External jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        // jQuery for loading content dynamically
+        $(document).ready(function () {
+            $("#quotesLink").click(function () {
+                $('#content').load("new.html");
+            });
+        });
+
+        // JavaScript Functions for Interactions
+
+        // Function to display error message and hide form
+        function displayErrorMessage() {
+            document.getElementById('errorMessage').innerHTML = '<br><br><br><br>Sorry! Due to some technical error, the data was not received!';
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('chatBox').style.display = 'none';
+        }
+
+        // Function to display second chat box
+        function showChat2() {
+            document.getElementById('chatBox2').style.display = 'block';
+            document.getElementById('chatBox1').style.display = 'none';
+        }
+
+        // Function to display first chat box
+        function showChat1() {
+            document.getElementById('chatBox2').style.display = 'none';
+            document.getElementById('chatBox1').style.display = 'block';
+        }
+
+        // Function to switch page content visibility
+        function showPageContent() {
+            document.getElementById("pageIntro").style.display = 'none';
+            document.getElementById("content").style.display = 'block';
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Main Navigation Bar -->
+    <div id="navbarContainer">
+        <div class="navbar">
+            <ul class="navbarMenu">
+                <li class="menuItem"><a href="https://sushant110030.github.io">HOME</a></li>
+
+                <!-- Dropdown for "Other Works" -->
+                <li class="menuItem dropdown">
+                    <a href="#">Other Works</a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="submenuItem"><a href="#" id="quotesLink" onclick="showPageContent()">Quotes</a></li>
+                            <li class="submenuItem"><a href="#">Articles</a></li>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Dropdown for "Contact" -->
+                <li class="menuItem dropdown">
+                    <a href="#">Contact</a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Additional Menu Items -->
+                <li class="menuItem dropdown">
+                    <a href="#">..</a>
+                    <div class="submenu">
+                        <ul>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                            <li class="submenuItem"><a href="#">Currently Not Available</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Intro Section -->
+    <div id="pageIntro">
+        <section class="section box-1"></section>
+        <section class="section box-2">
+
+            <!-- Contact Form -->
+            <form id="contactForm" method="post" action="" target="_parent">
+                <div class="formGroup">
+                    <div class="formLabel">Hi 👋 What's your name?</div>
+                    <input type="text" name="fname" placeholder="Your Name">
+                </div>
+
+                <div class="formGroup">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" placeholder="abc@gmail.com">
+                </div>
+
+                <div class="formGroup">
+                    <label>Please rate the visuals of this website:</label>
+                    <input type="radio" name="rating" value="1"> 1
+                    <input type="radio" name="rating" value="2"> 2
+                    <input type="radio" name="rating" value="3"> 3
+                    <input type="radio" name="rating" value="4"> 4
+                    <input type="radio" name="rating" value="5"> 5
+                </div>
+
+                <div class="formGroup">
+                    <label>Any Suggestions:</label>
+                    <textarea name="suggestion" rows="10" cols="50" placeholder="Your suggestion here..."></textarea>
+                </div>
+
+                <button type="button" onclick="displayErrorMessage()">Submit</button>
+            </form>
+
+            <p id="errorMessage" style="color: green; text-align: center;"></p>
+        </section>
+    </div>
+
+    <!-- Chat Bot Interaction -->
+    <div id="chatButtonContainer">
+        <button type="button" onclick="showChat2()" style="font-size: 4vw; width: 100%; height: 100%;">BOTY</button>
+    </div>
+
+    <!-- Chat Box 2 - Active Chat -->
+    <div id="chatBox2" class="chatBox" style="display: none;">
+        <p class="chatMessage">Hi! How can I help you?</p>
+        <div id="chatBox2Content" class="chatBoxContent">
+            <button type="button" onclick="showChat1()">Close</button>
+        </div>
+        <div class="chatTextBox">
+            <textarea id="chatText" style="width: 100%; height: 100%;">Currently Inactive</textarea>
+        </div>
+    </div>
+
+    <!-- Content Page Section (hidden initially) -->
+    <div id="content" style="width: 98vw; height: 100vh;"></div>
+
+</body>
+
+</html>
